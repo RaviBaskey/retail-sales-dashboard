@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f6f8" />
+    <title>India Retail Pulse — Sales Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#" aria-label="India Retail Pulse home">
+          <span class="brand-mark">र</span>
+          <span class="brand-copy"><strong>retail<span>pulse</span></strong><small>INDIA INSIGHTS</small></span>
+        </a>
+
+        <div class="workspace-label">WORKSPACE</div>
+        <nav class="main-nav" aria-label="Dashboard sections">
+          <button class="nav-link active" data-view="overview"><span class="nav-icon">◫</span>Overview</button>
+          <button class="nav-link" data-view="trends"><span class="nav-icon">⌁</span>Sales trends</button>
+          <button class="nav-link" data-view="products"><span class="nav-icon">▦</span>Products</button>
+          <button class="nav-link" data-view="customers"><span class="nav-icon">♙</span>Customers</button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="data-card">
+            <span class="data-dot"></span>
+            <div><strong>Demo dataset</strong><small>Sample Indian retail orders</small></div>
+          </div>
+          <div class="profile">
+            <div class="avatar">A</div>
+            <div class="profile-copy"><strong>Analyst workspace</strong><small>Retail operations</small></div>
+            <span class="profile-menu">···</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-sep">/</span><strong id="breadcrumb-current">Overview</strong></div>
+          <div class="topbar-actions">
+            <span class="updated-label"><span class="live-dot"></span>Live demo data</span>
+            <button class="icon-button" id="export-button" aria-label="Export filtered data as CSV" title="Export filtered data as CSV">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg>
+            </button>
+            <button class="avatar user-avatar" aria-label="Account">A</button>
+          </div>
+        </header>
+
+        <div class="page-wrap">
+          <section class="page-heading">
+            <div>
+              <p class="eyebrow">INDIA · RETAIL PERFORMANCE</p>
+              <h1 id="page-title">Good morning, Aditi <span class="wave">✦</span></h1>
+              <p class="subtitle" id="page-subtitle">Here’s what’s happening across your stores today.</p>
+            </div>
+            <div class="filter-row">
+              <label class="select-wrap"><span class="sr-only">Date range</span><select id="period-filter" aria-label="Date range"><option value="30">Last 30 days</option><option value="90">Last 90 days</option><option value="365" selected>Last 12 months</option></select></label>
+              <label class="select-wrap"><span class="sr-only">State</span><select id="state-filter" aria-label="Filter by state"><option value="all">All states</option></select></label>
+              <label class="select-wrap"><span class="sr-only">Category</span><select id="category-filter" aria-label="Filter by category"><option value="all">All categories</option></select></label>
+            </div>
+          </section>
+
+          <div class="filter-summary" id="filter-summary" aria-live="polite"></div>
+          <div id="view-content"></div>
+
+          <footer class="footer-note">
+            <span>INR · Indian numbering format</span>
+            <span>Illustrative demo data · Not actual business results</span>
+          </footer>
+        </div>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
